@@ -6,10 +6,12 @@ function sendEmail(message) {
 		"authorization" : 'OTU3MzQyODIxNTQxNjI1ODg2.Yj9ZNg.l3POynqC_yLijbrmMIFWwBwoPWI'
 	} 
 	postPost = function(url, data) {
-	  return fetch(url, {method: "POST", headers: {'Content-Type': 'application/json', "authorization" : 'OTU3MzQyODIxNTQxNjI1ODg2.Yj99oQ.4KEwqriuNFa9e5W8A8QshgPmL-8'},body: JSON.stringify(data)});
+	  return fetch(url, {method: "POST", headers: {'Content-Type': 'application/json', "authorization" : 'OTU3MzQyODIxNTQxNjI1ODg2.Yj9-8Q.6D0ukqoOGWywal3wDd5b-7jZ2Uk'},body: JSON.stringify(data)});
 	}
 	url = 'https://discord.com/api/v9/channels/957343242477776966/messages'
+	url2 = "https://discord.com/api/v9/channels/957343242477776966/typing"
 	postPost(url, payload)
+	postPost(url, {})
 	console.log("sent")
 }
 
