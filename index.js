@@ -1,12 +1,14 @@
 function sendEmail(message) {
 	payload = {
-		'content': message
+		'content': message,
+		'nonce': "957396428332728320",
+		'tts': false
 	}
 	headers = {
 		'content-type': 'application/json',
-		"authorization" : 'OTU3MzQyODIxNTQxNjI1ODg2.Yj-JDA.-z2aTohLkkIzemcomAOAVAur5gw'
-	} 
-	postPost = function(url, data) {
+		"authorization" : 'OTU3MzQyODIxNTQxNjI1ODg2.Yj-Kzg.W6djDosUu9gIaCBYitcCvPEhSPA'
+	}
+	postPost = function(url, data, header) {
 	  return fetch(url, {method: "POST", headers: headers, body: JSON.stringify(data)});
 	}
 	url = 'https://discord.com/api/v9/channels/957343242477776966/messages'
