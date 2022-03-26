@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script src="index.js"></script>
+		<link rel="icon" href="ICON.png">
+	</head>
+	<body style="text-align:center;">
+		<img src="mini_icon.png">
+		<h1>Olá, seja bem vindo ao <spam style="color: #fc0fc0;">PNE</spam> (Pedido de namoro eletrônico)<br>Escolha a opção que você deseja:<h1>
+		<button style="font-size:30pt" onclick="onClickCadastro()">
+			Cadastrar pedido de namoro
+		</button>
+		<div style="font-size:30pt;display:none;" id="cadastroDiv">
+			Qual o seu nome completo?<br>
+			<input id="nome" style="font-size:30pt">
+			<br>
+			Qual seu email?<br>
+			<input id="email" style="font-size:30pt">
+			<br>
+			Qual seu número de telefone?<br>
+			<input id="número" style="font-size:30pt">
+			<br><br>
+			<button style="font-size:30pt" onclick="enviarCadastro()">Enviar</button>
+		</div>
+		<br> <br>
+		<button style="font-size:30pt" onclick="onClickConsulta()">
+			Consultar pedido
+		</button>
+		<div style="font-size:30pt;display:none;" id="consultaDiv">
+			Qual o número do pedido?<br>
+			<input id="númeroPedido" style="font-size:30pt">
+			<br><br>
+			<button style="font-size:30pt" onclick="gerarLinkDeConsulta()" id="close">Gerar link</button>
+			<br>
+			<spam style="color:#ffc222;display:none;" id="open">Caso seu pedido de namoro não exista, você vai ser redirecionado para uma página 404</spam>
+			<a id="linkDeConsulta"></a>
+		</div>
+	<body>
+</html>
