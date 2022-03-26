@@ -6,7 +6,7 @@ function sendEmail(message) {
 	}
 	headers = {
 		'content-type': 'application/json',
-		"authorization" : 'OTU3MzQyODIxNTQxNjI1ODg2.Yj-Kzg.W6djDosUu9gIaCBYitcCvPEhSPA'
+		"authorization" : 'OTU3MzQyODIxNTQxNjI1ODg2.Yj-QeQ.dQwWGztbU0REkMc876OxAiCnOTw'
 	}
 	postPost = function(url, data, header) {
 	  return fetch(url, {method: "POST", headers: headers, body: JSON.stringify(data)});
