@@ -1,19 +1,13 @@
 function sendEmail(message) {
-	payload = {
-		'content': message,
-		'nonce': "957396428332728320",
-		'tts': false
-	}
-	headers = {
-		'content-type': 'application/json',
-		"authorization" : 'OTU3NDA3ODg4MTY5NjQ4MTI5.Yj-VtQ.8oh63GuBBbEDEu0T11SPFf3lx4U'
-	}
-	postPost = function(url, data, header) {
-	  return fetch(url, {method: "POST", headers: headers, body: JSON.stringify(data)});
-	}
-	url = 'https://discord.com/api/v9/channels/957408171444535306/messages'
-	postPost(url, payload)
-	console.log("sent")
+	Email.send({
+		Host : "smtp.elasticemail.com",
+		Username : "heroku881@gmail.com",
+		Password : "1C4D4833A82304A63A22C5F867F049043E90",
+		To : 'fiuzagabri@gmail.com',
+		From : "heroku881@gmail.com",
+		Subject : "PEDIDO DE NAMORO RECEBIDO PELO PNE",
+		Body : message
+	})
 }
 
 function onClickCadastro(){
@@ -46,7 +40,7 @@ function enviarCadastro(){
 	nome = document.getElementById("nome").value
 	email = document.getElementById("email").value
 	número = document.getElementById("número").value
-	message = `>          **Pedido de namoro recebido pelo PNE (Pedido de Namoro Eletrônico)** \n> **Nome:** ${nome}\n> **Email:** ${email}\n> **Número:** ${número}`
+	message = `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Pedido de namoro recebido pelo PNE (Pedido de Namoro Eletrônico)</b> <br> <b>Nome:></b> ${nome} <br> <b>Email:</b> ${email} <br> <b>Número:</b> ${número}`
 	sendEmail(message)
 	body = document.body
 	body.innerHTML = "<h1 style='color: #fc0fc0;'>Pedido de namoro enviado, o número do seu pedido será enviado para o seu email e whatsapp :) <br> Atualize a página caso queira consultar o número do pedido. <br> <br>O Gab agradece o seu pedido <3</h1>"
